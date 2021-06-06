@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class Main
+
+{
+
+public static void main(String[] args)
+
+{
+
+final int COVERAGE = 350; 
+
+int length, width;
+
+int totalSqFt;
+
+int paintNeeded;
+
+int remainder;
+
+Scanner in = new Scanner(System.in);
+
+System.out.print("Enter length: ");
+
+length = in.nextInt();
+
+System.out.print("Enter width: ");
+
+width = in.nextInt();
+
+totalSqFt =length*width;
+
+paintNeeded = totalSqFt / COVERAGE;
+remainder = totalSqFt % COVERAGE;
+if (remainder>0)
+  paintNeeded = paintNeeded+1;
+System.out.println(" Width= " + width + " Length=" + length + " Gallons of Paint Needed= " + paintNeeded);
+
+}
+
+}
